@@ -77,7 +77,7 @@
 
 
 .work-item-container {
-    max-width: 340px;
+    max-width: 483px;
     margin-left: auto;
     margin-right: auto;
     /* margin-top: 50px; */
@@ -220,7 +220,7 @@ a:active, a:hover {
 a, a:visited, a:active {
     color: white;
     text-decoration: none;
-    border-bottom: 1px white dotted;
+    /* border-bottom: 1px white dotted; */
 }
 #group-projects {
     background-color: #1d1919;
@@ -433,6 +433,9 @@ ol.linenums {
     margin-bottom: 0;
     color: #969896;
 }
+.accordion{
+cursor: pointer;
+}
 .accordion-icon {
     float: right;
     -moz-transition: -moz-transform .2s ease-in-out;
@@ -488,4 +491,30 @@ ol.linenums {
     padding-right: 10%;
     height: inherit;
     visibility: hidden;
+}
+.work-item-title-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    line-height: 35px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    pointer-events: none;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+.work-item-title {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: 100;
+    font-size: 30px;
+}
+.visible{
+    display: block;
+}
+.menubar-item:hover{
+background: #7B2526;
+text-decoration: none;
 }

@@ -59,6 +59,14 @@ $(document).ready(function () {
         }, 200); // Delay ensures the page is fully loaded before scrolling
     }
 });
+$(document).ready(function () {
+    $(".accordion").click(function () {
+      $(this).toggleClass("active"); // Toggle active class on the accordion
+      $(this).find(".accordion-icon").toggleClass("rotate"); // Rotate the icon
+      $(this).next(".accordion-inner").toggleClass("visible"); // Show/hide accordion content
+    });
+  });
+  
 
 
 
