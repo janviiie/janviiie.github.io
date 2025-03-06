@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Zombie Game</title>
+    <title>Zombieland Game</title>
     <meta charset="UTF-8" />
     <meta name="description" content="Zombie Game Content" />
     <meta name="keywords" content="warrior, game, creative, html" />
@@ -96,7 +96,7 @@
                 <!-- PROJECT TITLE -->
                 <div class="pp-title-container">
                   <div class="pp-title">
-                    <span>Soul Knight</span>
+                    <span>Zombieland</span>
                   </div>
                 </div>
                 <!-- End of PROJECT TITLE -->
@@ -117,35 +117,28 @@
                           <strong>Project Type</strong>
                         </td>
                         <td class="pp-facts-cell">
-                          University / group project
+                          Personal project
                         </td>
                       </tr>
                       <tr>
                         <td class="pp-facts-cell">
                           <strong>Project Duration</strong>
                         </td>
-                        <td class="pp-facts-cell">~5 months</td>
+                        <td class="pp-facts-cell">~3 months</td>
                       </tr>
                       <tr>
                         <td class="pp-facts-cell">
                           <strong>Software Used</strong>
                         </td>
-                        <td class="pp-facts-cell">Unreal Engine 4</td>
+                        <td class="pp-facts-cell">Unity</td>
                       </tr>
                       <tr>
                         <td class="pp-facts-cell">
                           <strong>Languages Used</strong>
                         </td>
-                        <td class="pp-facts-cell">C++, Blueprints, C#</td>
+                        <td class="pp-facts-cell">C#</td>
                       </tr>
-                      <tr>
-                        <td class="pp-facts-cell">
-                          <strong>Primary Role(s)</strong>
-                        </td>
-                        <td class="pp-facts-cell">
-                          Tech lead / Lead programmer
-                        </td>
-                      </tr>
+                      
                     </tbody>
                   </table>
                 </div>
@@ -153,30 +146,25 @@
 
                 <!-- PROJECT DESCRIPTION -->
                 <div class="pp-contents">
-                  <h1>About Soul&nbsp;Knight</h1>
+                  <h1>About Zombieland</h1>
 
                   <p></p>
                   <p>
-                    Soul Knight is a project that started as part of my 2nd year
-                    at&nbsp;<a
-                      href="https://www.nhtv.nl/ENG/bachelors/creative-media-and-game-technologies/startpage.html"
-                      target="_blank"
-                      >NHTV&nbsp;University</a
-                    >. I&nbsp;took the role of&nbsp;Lead Programmer,
-                    implementing most of the game's functionality, some of which
-                    I&nbsp;feature here.&nbsp;In total there were around 20 - 25
-                    people on the project. This project helped me learn a lot
-                    about Unreal Engine 4, and C++&nbsp;in general.
+                    Zombieland – A Thrilling Zombie Shooter Game
+              Zombieland is an action-packed zombie survival game developed in Unity Engine using C#. It features an intense first-person shooter (FPS) experience where players must fight off waves of zombies using multiple weapons while navigating through different maps.
+
                   </p>
                   <p></p>
 
-                  <h1>Camera System</h1>
+                  <h1>Game Features:</h1>
+                  <h2>Main Menu with Four Options:</h2>
 
                   <p></p>
                   <p>
-                    I&nbsp;designed and&nbsp;developed a dynamic 'roaming'
-                    camera. It uses an 'imaginary circle' as reference point,
-                    which the player pushes around:
+                    <strong>Play –</strong> Choose a map and start the action-packed gameplay.<br>
+                    <strong>Settings –</strong> Adjust mouse sensitivity and game difficulty for a personalized experience.<br>
+                    <strong>Maps –</strong> Currently includes two playable maps, with a third map in development.<br>
+                    <strong>Exit –</strong> Quit the game anytime.<br>
                   </p>
                   <p></p>
                   <div style="text-align: center; margin-bottom: 10px">
@@ -192,29 +180,16 @@
                       />
                     </video>
                   </div>
-                  <p>
-                    In the video there are two circles, a bigger and smaller
-                    one. The bigger one (and all its properties) is used while
-                    the player is running, the smaller one is used while the
-                    player is walking. The camera system blends between them,
-                    based on the speed of the player. This allows the camera to
-                    be more precise and close-by while walking, and gives more
-                    of an overview while running.
-                  </p>
+                  
 
                   <p></p>
-                  <p>
-                    The circles can also grow / shrink and change
-                    properties&nbsp;dynamically, based on the scene for example,
-                    allowing shots which still keep the player in focus
-                    correctly while also adhering to the context of the scene.
-                  </p>
+                 
                   <p></p>
 
                   <div class="accordion">
                     <i class="fa fa-code" aria-hidden="true"></i>
                     <span style="margin-left: 5px"
-                      >CODE SNIPPET - Dynamic Camera</span
+                      >CODE SNIPPET</span
                     >
                     <div class="accordion-icon">
                       <i class="fa fa-times" aria-hidden="true"></i>
@@ -222,42 +197,29 @@
                   </div>
                   <div class="accordion-inner">
                     <p>
-                      The following code is used to update the camera,
-                      calculating if the player has moved outside of the circle,
-                      and if so pushing the circle in that direction.
+                      The following code is the small snippet about the game and
+                    coding has been done in C#.
                     </p>
-
+                    <div style="text-align: center; margin-bottom: 10px">
+                      <video autoplay="" muted="" loop="" style="max-width: 100%; max-height: 100%">
+                        <source src="img/zombie_game/code_snippet.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                     <pre
                       class="prettyprint linenums prettyprinted"
                       style=""
                     ><ol class="linenums"><li class="L0"><span class="kwd">void</span><span class="pln"> </span><span class="typ">FCameraRoamCircle</span><span class="pun">::</span><span class="typ">UpdateInnerPosition</span><span class="pun">(</span><span class="typ">FVector</span><span class="pln"> aNewPos</span><span class="pun">)</span></li><li class="L1"><span class="pun">{</span></li><li class="L2"><span class="pln">	</span><span class="com">/* Relative vector from player to circle */</span></li><li class="L3"><span class="pln">	</span><span class="typ">FVector</span><span class="pln"> tInnerPosToCircle </span><span class="pun">=</span><span class="pln"> aNewPos </span><span class="pun">-</span><span class="pln"> mPosition</span><span class="pun">;</span></li><li class="L4"><span class="pln">	tInnerPosToCircle</span><span class="pun">.</span><span class="pln">Z </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0.0f</span><span class="pun">;</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pln">	</span><span class="kwd">float</span><span class="pln"> tInnerPosToCircleLength </span><span class="pun">=</span><span class="pln"> tInnerPosToCircle</span><span class="pun">.</span><span class="typ">Size</span><span class="pun">();</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">	</span><span class="com">/* Normalized direction from player to circle */</span></li><li class="L9"><span class="pln">	</span><span class="typ">FVector</span><span class="pln"> tInnerPosToCircleDirection </span><span class="pun">=</span><span class="pln"> tInnerPosToCircle</span><span class="pun">;</span></li><li class="L0"><span class="pln">	tInnerPosToCircleDirection</span><span class="pun">.</span><span class="typ">Normalize</span><span class="pun">();</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">	</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">tInnerPosToCircleLength </span><span class="pun">&gt;</span><span class="pln"> mProps</span><span class="pun">-&gt;</span><span class="typ">Radius</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> THRESH_POINTS_ARE_NEAR</span><span class="pun">)</span></li><li class="L3"><span class="pln">	</span><span class="pun">{</span></li><li class="L4"><span class="pln">		</span><span class="com">/* Player has moved outside of the circle, calculate the difference and add it to the position */</span></li><li class="L5"><span class="pln">		</span><span class="kwd">float</span><span class="pln"> tMoveDeltaLength </span><span class="pun">=</span><span class="pln"> tInnerPosToCircleLength </span><span class="pun">-</span><span class="pln"> mProps</span><span class="pun">-&gt;</span><span class="typ">Radius</span><span class="pun">;</span></li><li class="L6"><span class="pln">		</span><span class="typ">FVector</span><span class="pln"> tMoveDelta </span><span class="pun">=</span><span class="pln"> tInnerPosToCircleDirection </span><span class="pun">*</span><span class="pln"> tMoveDeltaLength</span><span class="pun">;</span></li><li class="L7"><span class="pln">			</span></li><li class="L8"><span class="pln">		</span><span class="com">/* Calculate the delta rotation */</span></li><li class="L9"><span class="pln">		</span><span class="kwd">float</span><span class="pln"> tPushAngle </span><span class="pun">=</span><span class="pln"> </span><span class="typ">FMath</span><span class="pun">::</span><span class="typ">RadiansToDegrees</span><span class="pun">(</span><span class="typ">FMath</span><span class="pun">::</span><span class="typ">Acos</span><span class="pun">(</span><span class="typ">FVector</span><span class="pun">::</span><span class="typ">DotProduct</span><span class="pun">(</span><span class="pln">tInnerPosToCircleDirection</span><span class="pun">,</span><span class="pln"> mRotation</span><span class="pun">.</span><span class="typ">GetRightVector</span><span class="pun">())));</span></li><li class="L0"><span class="pln">		tPushAngle </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-(</span><span class="pln">tPushAngle </span><span class="pun">-</span><span class="pln"> </span><span class="lit">90</span><span class="pun">);</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">		</span><span class="com">/* Add position and rotation */</span></li><li class="L3"><span class="pln">		mPosition </span><span class="pun">+=</span><span class="pln"> tMoveDelta</span><span class="pun">;</span></li><li class="L4"><span class="pln">		mRotation </span><span class="pun">*=</span><span class="pln"> </span><span class="typ">FQuat</span><span class="pun">::</span><span class="typ">MakeFromEuler</span><span class="pun">(</span><span class="typ">FVector</span><span class="pun">::</span><span class="typ">UpVector</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">(</span><span class="pln">tPushAngle </span><span class="pun">/</span><span class="pln"> mProps</span><span class="pun">-&gt;</span><span class="typ">RotationTightness</span><span class="pun">));</span></li><li class="L5"><span class="pln">	</span><span class="pun">}</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">	mInnerPosition </span><span class="pun">=</span><span class="pln"> aNewPos</span><span class="pun">;</span></li><li class="L8"><span class="pun">}</span></li></ol></pre>
                   </div>
 
-                  <p>
-                    The camera has many more features, such as the ability to
-                    add a custom offset while the player is&nbsp;inside of the
-                    circle, based on the axes of the circle. This can for
-                    example create an&nbsp;effect where the camera tilts, pans
-                    and/or zooms when the player walks backwards or forwards.
-                    Furthermore there are options for smoothing, tightness of
-                    rotation, offsets, and more.
-                  </p>
+                
 
                   <p></p>
-                  <h1>Gameplay Mechanics</h1>
+                  <h2>Weapons & Gameplay:</h2>
                   <p>
-                    I&nbsp;implemented all gameplay features for the main
-                    character, as well as other characters and mechanics
+                    Players can switch between four different guns to eliminate zombies.<br>
+                    As time progresses, zombies spawn in greater numbers, increasing the challenge.<br>
+                    If zombies get too close, they attack the player, making survival even more intense.<br>
                   </p>
-                  <h2>Dashing</h2>
-                  <p>
-                    The dash is the core mechanic of Soul Knight. It's used as a
-                    means of combat&nbsp;and traversal. The auto-aim feature
-                    calculates the angle between the player and the object he's
-                    dashing in to so that the player can aim quickly while in
-                    the air.
-                  </p>
-                  <p></p>
                   <div style="text-align: center; margin-bottom: 10px">
                     <video
                       autoplay=""
@@ -284,11 +246,11 @@
                       />
                     </video>
                   </div>
-                  <h1>Other mechanics</h1>
-
-                  <p></p>
-                  <h2>Picking up objects</h2>
-                  <p></p>
+                  
+                  <h2>Advanced AI & Movement System</h2>
+                  <p>The zombies are designed with AI-driven movement, ensuring unpredictable attacks and engaging combat.<br>
+                    Smooth and responsive character controls for a seamless FPS experience.<br>
+                    With immersive gameplay, strategic shooting mechanics, and ever-increasing challenges, Zombieland delivers an exhilarating survival experience.<br></p>
 
                   <div style="text-align: center; margin-bottom: 10px">
                     <video
@@ -303,14 +265,7 @@
                       />
                     </video>
                   </div>
-                  <h2>Gliding</h2>
-
-                  <p></p>
-                  <p>
-                    I&nbsp;worked closely with our FX&nbsp;artist to implement
-                    the wings, and fine tune the way the particle is controlled.
-                  </p>
-                  <p></p>
+                 
 
                   <div style="text-align: center; margin-bottom: 10px">
                     <video
@@ -325,16 +280,7 @@
                       />
                     </video>
                   </div>
-                  <h2>Boulder riding</h2>
-
-                  <p></p>
-                  <p>
-                    Boulders are creatures which can be used as means of
-                    transportation. In the pre-alpha, the way the player "snaps"
-                    to the boulder is quite visible, this is something that
-                    I&nbsp;wanted to polish later.
-                  </p>
-                  <p></p>
+                 
 
                   <div style="text-align: center; margin-bottom: 10px">
                     <video
@@ -349,18 +295,7 @@
                       />
                     </video>
                   </div>
-                  <h2>Volcano Turtle</h2>
-
-                  <p></p>
-                  <p>
-                    This 'explosive' turtle can be used to elevate yourself.
-                    I&nbsp;implemented his attack, as well as the ability to fly
-                    upwards when jumping inside the steam, and that he turns his
-                    head towards the player when he's close by. I&nbsp;didn't do
-                    the AI&nbsp;(turning around, walking around).
-                  </p>
-                  <p></p>
-
+                 
                   <div style="text-align: center; margin-bottom: 10px">
                     <video
                       autoplay=""
@@ -380,26 +315,6 @@
           </div>
           <!-- End of PROJECT DESCRIPTION -->
         </div>
-
-        <div
-          id="footer"
-          class="section--small section"
-          style="background-color: #525252"
-        >
-          <div
-            class="section-content"
-            style="
-              text-align: center;
-              padding-top: 10px;
-              padding-bottom: 10px;
-              margin-top: 40px;
-            "
-          >
-            <span class="text"
-              >Copyright © 2025 by Hugo Peters | All images, logos and names are
-              used with permission</span
-            >
-          </div>
         </div>
       </div>
     </div>
@@ -573,24 +488,5 @@
       title="Twitter analytics iframe"
     ></iframe>
   </body>
-  <script>
-    $('.accordion').on('click', function (event) {
-      event.preventDefault();
-      let accordion_item = document.getElementsByClassName('accordion-icon');
-      console.log(accordion_item);
-      accordion_item.classList.add('rotate');
-      //   accordion_item.classList.add('rotate');
-      this.addclass('active');
 
-      let targetElement = $(this).data('target-element'); // Get the data attribute
-      if (targetElement) {
-        $('html, body').animate(
-          {
-            scrollTop: $(targetElement).offset().top,
-          },
-          800
-        ); // Smooth scroll to the target
-      }
-    });
-  </script>
 </html>
