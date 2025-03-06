@@ -197,22 +197,23 @@
     opacity: .6;
     font-size: 40px;
     position: relative;
-    z-index: 60;
+    z-index: 6;
     text-decoration: none;
     border: none;
 }
 .social-icon:hover {
     color: white;
     text-decoration: none;
+    opacity: 1;
 }
 a:hover {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
     border: none;
 }
 a:hover, a:focus {
     color: #23527c;
-    text-decoration: underline;
+    text-decoration: none;
 }
 a:active, a:hover {
     outline: 0;
