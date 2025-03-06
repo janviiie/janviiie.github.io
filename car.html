@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zombie Game</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Zombie Game Content" />
+    <meta name="keywords" content="warrior, game, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="background-frame">
+        <div
+          id="background-slider"
+          style="position: relative; z-index: 0; background: none"
+        >
+          <div
+            class="backstretch"
+            style="
+              left: 0px;
+              top: 0px;
+              overflow: hidden;
+              margin: 0px;
+              padding: 0px;
+              height: 100vh;
+              width: 1473px;
+              z-index: -999998;
+              position: absolute;
+            "
+          >
+            <img id="background-image"
+              src="img\car_game\car_game1.png"
+              style="
+                position: absolute;
+                margin: 0px;
+                padding: 0px;
+                border: none;
+                width: 1473px;
+                height: 911.562px;
+                max-height: none;
+                max-width: none;
+                z-index: -999999;
+                left: 0px;
+                top: -172.281px;
+              "
+            />
+          </div>
+        </div>
+<!-- 
+        <script type="text/javascript">
+          /* Cache urls for background images so we can use them later for the slideshow :D */
+          var inUrls = [
+            {
+              url: 'img\car_game\car_change.png',
+            },
+            {
+              url: 'img\car_game\car_win.png',
+            },
+            {
+              url: 'img\car_game\car_game_red.png',
+            },
+            {
+              url: 'img\car_game\car_game1.png',
+            },
+          ];
+          var cachedBackgroundSlideshow = new Array();
+
+          for (var i = 0; i < inUrls.length; i++) {
+            cachedBackgroundSlideshow.push(inUrls[i].url);
+          }
+          console.log(cachedBackgroundSlideshow);
+        </script> -->
+        <script>
+          // Cached image URLs
+          var inUrls = [
+            "img/car_game/car_change.png",
+            "img/car_game/car_game_win.png",
+            "img/car_game/car_game_red.png",
+            "img/car_game/car_game1.png",
+          ];
+        
+          var index = 0;
+          var backgroundImage = document.getElementById("background-image");
+        
+          function changeBackground() {
+            index = (index + 1) % inUrls.length; // Loop through images
+            backgroundImage.src = inUrls[index];
+          }
+        
+          // Change background every 5 seconds
+          setInterval(changeBackground, 3000);
+        </script>
+      </div>
+
+      <!-- PRELOADER -->
+      <div id="preloader-frame" class="" style="opacity: 0; display: none">
+        <div id="preloader-loader">
+          <div class="spinner"></div>
+        </div>
+      </div>
+      <!-- End of PRELOADER -->
+
+      <div id="page">
+        <div id="pp-container" class="" style="opacity: 1; display: block">
+          <!-- <div class="pp-bg"></div> -->
+          <div class="container pp-contents-container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <!-- PROJECT TITLE -->
+                <div class="pp-title-container">
+                  <div class="pp-title">
+                    <span>Soul Knight</span>
+                  </div>
+                </div>
+                <!-- End of PROJECT TITLE -->
+
+                <!-- PROJECT FACTS -->
+
+                <div class="pp-facts-container">
+                  <table style="margin: auto">
+                    <tbody>
+                      <tr>
+                        <td class="pp-facts-cell">
+                          <strong>Project Status</strong>
+                        </td>
+                        <td class="pp-facts-cell">On hold</td>
+                      </tr>
+                      <tr>
+                        <td class="pp-facts-cell">
+                          <strong>Project Type</strong>
+                        </td>
+                        <td class="pp-facts-cell">
+                          University / group project
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pp-facts-cell">
+                          <strong>Project Duration</strong>
+                        </td>
+                        <td class="pp-facts-cell">~5 months</td>
+                      </tr>
+                      <tr>
+                        <td class="pp-facts-cell">
+                          <strong>Software Used</strong>
+                        </td>
+                        <td class="pp-facts-cell">Unreal Engine 4</td>
+                      </tr>
+                      <tr>
+                        <td class="pp-facts-cell">
+                          <strong>Languages Used</strong>
+                        </td>
+                        <td class="pp-facts-cell">C++, Blueprints, C#</td>
+                      </tr>
+                      <tr>
+                        <td class="pp-facts-cell">
+                          <strong>Primary Role(s)</strong>
+                        </td>
+                        <td class="pp-facts-cell">
+                          Tech lead / Lead programmer
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End of PROJECT FACTS -->
+
+                <!-- PROJECT DESCRIPTION -->
+                <div class="pp-contents">
+                  <h1>About Soul&nbsp;Knight</h1>
+
+                  <p></p>
+                  <p>
+                    Soul Knight is a project that started as part of my 2nd year
+                    at&nbsp;<a
+                      href="https://www.nhtv.nl/ENG/bachelors/creative-media-and-game-technologies/startpage.html"
+                      target="_blank"
+                      >NHTV&nbsp;University</a
+                    >. I&nbsp;took the role of&nbsp;Lead Programmer,
+                    implementing most of the game's functionality, some of which
+                    I&nbsp;feature here.&nbsp;In total there were around 20 - 25
+                    people on the project. This project helped me learn a lot
+                    about Unreal Engine 4, and C++&nbsp;in general.
+                  </p>
+                  <p></p>
+
+                  <h1>Camera System</h1>
+
+                  <p></p>
+                  <p>
+                    I&nbsp;designed and&nbsp;developed a dynamic 'roaming'
+                    camera. It uses an 'imaginary circle' as reference point,
+                    which the player pushes around:
+                  </p>
+                  <p></p>
+                  <div style="text-align: center; margin-bottom: 10px">
+                    <video
+                      autoplay=""
+                      muted=""
+                      loop=""
+                      style="max-width: 100%; max-height: 100%"
+                    >
+                      <source
+                        src="img/car_game/car_game_live.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <p>
+                    In the video there are two circles, a bigger and smaller
+                    one. The bigger one (and all its properties) is used while
+                    the player is running, the smaller one is used while the
+                    player is walking. The camera system blends between them,
+                    based on the speed of the player. This allows the camera to
+                    be more precise and close-by while walking, and gives more
+                    of an overview while running.
+                  </p>
+
+                  <p></p>
+                  <p>
+                    The circles can also grow / shrink and change
+                    properties&nbsp;dynamically, based on the scene for example,
+                    allowing shots which still keep the player in focus
+                    correctly while also adhering to the context of the scene.
+                  </p>
+                  <p></p>
+
+                  <div class="accordion">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                    <span style="margin-left: 5px"
+                      >CODE SNIPPET - Dynamic Camera</span
+                    >
+                    <div class="accordion-icon">
+                      <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="accordion-inner">
+                    <p>
+                      The following code is used to update the camera,
+                      calculating if the player has moved outside of the circle,
+                      and if so pushing the circle in that direction.
+                    </p>
+
+                    <pre
+                      class="prettyprint linenums prettyprinted"
+                      style=""
+                    ><ol class="linenums"><li class="L0"><span class="kwd">void</span><span class="pln"> </span><span class="typ">FCameraRoamCircle</span><span class="pun">::</span><span class="typ">UpdateInnerPosition</span><span class="pun">(</span><span class="typ">FVector</span><span class="pln"> aNewPos</span><span class="pun">)</span></li><li class="L1"><span class="pun">{</span></li><li class="L2"><span class="pln">	</span><span class="com">/* Relative vector from player to circle */</span></li><li class="L3"><span class="pln">	</span><span class="typ">FVector</span><span class="pln"> tInnerPosToCircle </span><span class="pun">=</span><span class="pln"> aNewPos </span><span class="pun">-</span><span class="pln"> mPosition</span><span class="pun">;</span></li><li class="L4"><span class="pln">	tInnerPosToCircle</span><span class="pun">.</span><span class="pln">Z </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0.0f</span><span class="pun">;</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pln">	</span><span class="kwd">float</span><span class="pln"> tInnerPosToCircleLength </span><span class="pun">=</span><span class="pln"> tInnerPosToCircle</span><span class="pun">.</span><span class="typ">Size</span><span class="pun">();</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">	</span><span class="com">/* Normalized direction from player to circle */</span></li><li class="L9"><span class="pln">	</span><span class="typ">FVector</span><span class="pln"> tInnerPosToCircleDirection </span><span class="pun">=</span><span class="pln"> tInnerPosToCircle</span><span class="pun">;</span></li><li class="L0"><span class="pln">	tInnerPosToCircleDirection</span><span class="pun">.</span><span class="typ">Normalize</span><span class="pun">();</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">	</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">tInnerPosToCircleLength </span><span class="pun">&gt;</span><span class="pln"> mProps</span><span class="pun">-&gt;</span><span class="typ">Radius</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> THRESH_POINTS_ARE_NEAR</span><span class="pun">)</span></li><li class="L3"><span class="pln">	</span><span class="pun">{</span></li><li class="L4"><span class="pln">		</span><span class="com">/* Player has moved outside of the circle, calculate the difference and add it to the position */</span></li><li class="L5"><span class="pln">		</span><span class="kwd">float</span><span class="pln"> tMoveDeltaLength </span><span class="pun">=</span><span class="pln"> tInnerPosToCircleLength </span><span class="pun">-</span><span class="pln"> mProps</span><span class="pun">-&gt;</span><span class="typ">Radius</span><span class="pun">;</span></li><li class="L6"><span class="pln">		</span><span class="typ">FVector</span><span class="pln"> tMoveDelta </span><span class="pun">=</span><span class="pln"> tInnerPosToCircleDirection </span><span class="pun">*</span><span class="pln"> tMoveDeltaLength</span><span class="pun">;</span></li><li class="L7"><span class="pln">			</span></li><li class="L8"><span class="pln">		</span><span class="com">/* Calculate the delta rotation */</span></li><li class="L9"><span class="pln">		</span><span class="kwd">float</span><span class="pln"> tPushAngle </span><span class="pun">=</span><span class="pln"> </span><span class="typ">FMath</span><span class="pun">::</span><span class="typ">RadiansToDegrees</span><span class="pun">(</span><span class="typ">FMath</span><span class="pun">::</span><span class="typ">Acos</span><span class="pun">(</span><span class="typ">FVector</span><span class="pun">::</span><span class="typ">DotProduct</span><span class="pun">(</span><span class="pln">tInnerPosToCircleDirection</span><span class="pun">,</span><span class="pln"> mRotation</span><span class="pun">.</span><span class="typ">GetRightVector</span><span class="pun">())));</span></li><li class="L0"><span class="pln">		tPushAngle </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-(</span><span class="pln">tPushAngle </span><span class="pun">-</span><span class="pln"> </span><span class="lit">90</span><span class="pun">);</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">		</span><span class="com">/* Add position and rotation */</span></li><li class="L3"><span class="pln">		mPosition </span><span class="pun">+=</span><span class="pln"> tMoveDelta</span><span class="pun">;</span></li><li class="L4"><span class="pln">		mRotation </span><span class="pun">*=</span><span class="pln"> </span><span class="typ">FQuat</span><span class="pun">::</span><span class="typ">MakeFromEuler</span><span class="pun">(</span><span class="typ">FVector</span><span class="pun">::</span><span class="typ">UpVector</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">(</span><span class="pln">tPushAngle </span><span class="pun">/</span><span class="pln"> mProps</span><span class="pun">-&gt;</span><span class="typ">RotationTightness</span><span class="pun">));</span></li><li class="L5"><span class="pln">	</span><span class="pun">}</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">	mInnerPosition </span><span class="pun">=</span><span class="pln"> aNewPos</span><span class="pun">;</span></li><li class="L8"><span class="pun">}</span></li></ol></pre>
+                  </div>
+
+                  <p>
+                    The camera has many more features, such as the ability to
+                    add a custom offset while the player is&nbsp;inside of the
+                    circle, based on the axes of the circle. This can for
+                    example create an&nbsp;effect where the camera tilts, pans
+                    and/or zooms when the player walks backwards or forwards.
+                    Furthermore there are options for smoothing, tightness of
+                    rotation, offsets, and more.
+                  </p>
+
+                  <p></p>
+                  <h1>Gameplay Mechanics</h1>
+                  <p>
+                    I&nbsp;implemented all gameplay features for the main
+                    character, as well as other characters and mechanics
+                  </p>
+                  <h2>Dashing</h2>
+                  <p>
+                    The dash is the core mechanic of Soul Knight. It's used as a
+                    means of combat&nbsp;and traversal. The auto-aim feature
+                    calculates the angle between the player and the object he's
+                    dashing in to so that the player can aim quickly while in
+                    the air.
+                  </p>
+                  <p></p>
+                  <div style="text-align: center; margin-bottom: 10px">
+                    <video
+                      autoplay=""
+                      muted=""
+                      loop=""
+                      style="max-width: 100%; max-height: 100%"
+                    >
+                      <source
+                        src="img/car_game/car_game_live.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div style="text-align: left; margin-bottom: 10px">
+                    <video
+                      autoplay=""
+                      muted=""
+                      loop=""
+                      style="max-width: 100%; max-height: 100%"
+                    >
+                      <source
+                        src="img/car_game/car_game_live.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <h1>Other mechanics</h1>
+
+                  <p></p>
+                  <h2>Picking up objects</h2>
+                  <p></p>
+
+                  <div style="text-align: center; margin-bottom: 10px">
+                    <video
+                      autoplay=""
+                      muted=""
+                      loop=""
+                      style="max-width: 100%; max-height: 100%"
+                    >
+                      <source
+                        src="img/car_game/car_game_live.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <h2>Gliding</h2>
+
+                  <p></p>
+                  <p>
+                    I&nbsp;worked closely with our FX&nbsp;artist to implement
+                    the wings, and fine tune the way the particle is controlled.
+                  </p>
+                  <p></p>
+
+                  <div style="text-align: center; margin-bottom: 10px">
+                    <video
+                      autoplay=""
+                      muted=""
+                      loop=""
+                      style="max-width: 100%; max-height: 100%"
+                    >
+                      <source
+                        src="img/car_game/car_game_live.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <h2>Boulder riding</h2>
+
+                  <p></p>
+                  <p>
+                    Boulders are creatures which can be used as means of
+                    transportation. In the pre-alpha, the way the player "snaps"
+                    to the boulder is quite visible, this is something that
+                    I&nbsp;wanted to polish later.
+                  </p>
+                  <p></p>
+
+                  <div style="text-align: center; margin-bottom: 10px">
+                    <video
+                      autoplay=""
+                      muted=""
+                      loop=""
+                      style="max-width: 100%; max-height: 100%"
+                    >
+                      <source
+                        src="img/car_game/car_game_live.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <h2>Volcano Turtle</h2>
+
+                  <p></p>
+                  <p>
+                    This 'explosive' turtle can be used to elevate yourself.
+                    I&nbsp;implemented his attack, as well as the ability to fly
+                    upwards when jumping inside the steam, and that he turns his
+                    head towards the player when he's close by. I&nbsp;didn't do
+                    the AI&nbsp;(turning around, walking around).
+                  </p>
+                  <p></p>
+
+                  <div style="text-align: center; margin-bottom: 10px">
+                    <video
+                      autoplay=""
+                      muted=""
+                      loop=""
+                      style="max-width: 100%; max-height: 100%"
+                    >
+                      <source
+                        src="img/car_game/car_game_live.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of PROJECT DESCRIPTION -->
+        </div>
+
+        <div
+          id="footer"
+          class="section--small section"
+          style="background-color: #525252"
+        >
+          <div
+            class="section-content"
+            style="
+              text-align: center;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              margin-top: 40px;
+            "
+          >
+            <span class="text"
+              >Copyright © 2025 by Hugo Peters | All images, logos and names are
+              used with permission</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENU BAR -->
+
+    <div
+      id="menubar-container"
+      class=""
+      style="opacity: 1; display: block; transform: translateY(0px)"
+    >
+      <!-- MENU BAR BG -->
+      <div id="menubar-bg"></div>
+      <!-- End of MENU BAR BG -->
+
+      <!-- MENU BAR CONTENT -->
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <!-- MENU BAR TITLE -->
+          <div class="col-xs-8 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+            <div id="menubar-title" class="noselect">
+              <span>Akshay Sharma</span>
+            </div>
+          </div>
+          <!-- End of MENU BAR TITLE -->
+
+          <!-- MENU BAR ITEMS -->
+          <div class="col-sm-6 col-md-9 col-lg-9 col-xl-10">
+            <!-- <div id="menubar-items-container">
+              <div class="menubar-item" data-target-element="#about">
+                <div class="noselect menubar-item-text">
+                  <span
+                    ><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    ABOUT</span
+                  >
+                </div>
+              </div>
+              <div
+                class="menubar-item"
+                data-target-element="#professional-projects"
+              >
+                <div class="noselect menubar-item-text">
+                  <span
+                    ><i class="fa fa-users" aria-hidden="true"></i> PROFESSIONAL
+                    PROJECTS</span
+                  >
+                </div>
+              </div>
+              <div class="menubar-item" data-target-element="#personal-work">
+                <div class="noselect menubar-item-text">
+                  <span
+                    ><i class="fa fa-heart" aria-hidden="true"></i> PERSONAL
+                    WORK</span
+                  >
+                </div>
+              </div>
+              <a
+                href="https://hugo.fyi/HugoPetersCV.pdf"
+                onclick="trackResume();return true;"
+                style="border: none; text-decoration: none"
+                target="_blank"
+                class="menubar-item"
+              >
+                <span class="noselect menubar-item-text"
+                  ><i class="fa fa-file-text" aria-hidden="true"></i>
+                  RESUME</span
+                >
+              </a>
+
+              <div class="menubar-item" data-target-element="#contact">
+                <div class="noselect menubar-item-text">
+                  <span
+                    ><i class="fa fa-comments" aria-hidden="true"></i>
+                    CONTACT</span
+                  >
+                </div>
+              </div>
+            </div> -->
+            <div id="menubar-items-container">
+              <a href="index.html#about" class="menubar-item">
+                <span class="noselect menubar-item-text">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i> ABOUT
+                </span>
+              </a>
+
+              <a href="index.html#professional-projects" class="menubar-item">
+                <span class="noselect menubar-item-text">
+                  <i class="fa fa-users" aria-hidden="true"></i> PROFESSIONAL
+                  PROJECTS
+                </span>
+              </a>
+
+              <a href="index.html#personal-work" class="menubar-item">
+                <span class="noselect menubar-item-text">
+                  <i class="fa fa-heart" aria-hidden="true"></i> PERSONAL WORK
+                </span>
+              </a>
+
+              <a
+                href="https://hugo.fyi/HugoPetersCV.pdf"
+                target="_blank"
+                class="menubar-item"
+              >
+                <span class="noselect menubar-item-text">
+                  <i class="fa fa-file-text" aria-hidden="true"></i> RESUME
+                </span>
+              </a>
+
+              <a href="index.html#contact" class="menubar-item">
+                <span class="noselect menubar-item-text">
+                  <i class="fa fa-comments" aria-hidden="true"></i> CONTACT
+                </span>
+              </a>
+            </div>
+          </div>
+          <!-- End of MENU BAR ITEMS -->
+
+          <!-- MENU BAR HAMBURGER -->
+          <div class="col-xs-4 col-sm-2">
+            <div
+              id="menubar-hamburger-icon"
+              class="hamburger hamburger--spin"
+              style="color: white"
+            >
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+          <!-- End of MENU BAR HAMBURGER -->
+        </div>
+      </div>
+      <!-- End of MENU BAR CONTENT -->
+    </div>
+    <!-- End of MENU BAR -->
+
+    <!-- SOCIAL -> Page Cover -->
+    <div id="social-pagecover-container">
+      <!-- social-pagecover will be placed here dynamically -->
+    </div>
+    <!-- End of SOCIAL -> Page Cover -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/velocity.min.js"></script>
+    <script type="text/javascript" src="/js/velocity.ui.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.vide.min.js"></script>
+    <script type="text/javascript" src="/js/help.parsecolor.js"></script>
+    <script type="text/javascript" src="/js/jquery.fullpage.min.js"></script>
+    <script type="text/javascript" src="/js/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="/js/lity.min.js"></script>
+    <script
+      type="text/javascript"
+      src="/js/syntaxhighlighter/shCore.js"
+    ></script>
+    <script type="text/javascript" src="/js/syntaxhighlighter/shBrushCpp.js">
+        type="text/javascript"
+        src="/js/photoswipe-ui-default.min.js"
+      >
+    </script>
+    <script type="text/javascript" src="/js/plyr.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <iframe
+      scrolling="no"
+      frameborder="0"
+      allowtransparency="true"
+      src="https://platform.twitter.com/widgets/widget_iframe.2f70fb173b9000da126c79afe2098f02.html?origin=https%3A%2F%2Fhugo.fyi"
+      title="Twitter settings iframe"
+      style="display: none"
+    ></iframe
+    ><iframe
+      id="rufous-sandbox"
+      scrolling="no"
+      frameborder="0"
+      allowtransparency="true"
+      allowfullscreen="true"
+      style="
+        position: absolute;
+        visibility: hidden;
+        display: none;
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+        border: none;
+      "
+      title="Twitter analytics iframe"
+    ></iframe>
+  </body>
+  <script>
+    $('.accordion').on('click', function (event) {
+      event.preventDefault();
+      let accordion_item = document.getElementsByClassName('accordion-icon');
+      console.log(accordion_item);
+      accordion_item.classList.add('rotate');
+      //   accordion_item.classList.add('rotate');
+      this.addclass('active');
+
+      let targetElement = $(this).data('target-element'); // Get the data attribute
+      if (targetElement) {
+        $('html, body').animate(
+          {
+            scrollTop: $(targetElement).offset().top,
+          },
+          800
+        ); // Smooth scroll to the target
+      }
+    });
+
+    $('.menubar-item').on('click', function (event) {
+      event.preventDefault(); // Prevent default action (useful if inside <a> tag)
+      let targetElement = $(this).data('target-element'); // Get the data attribute
+      if (targetElement) {
+        $('html, body').animate(
+          {
+            scrollTop: $(targetElement).offset().top,
+          },
+          800
+        ); // Smooth scroll to the target
+      }
+    });
+  </script>
+</html>
