@@ -349,6 +349,10 @@ body{
     -moz-transition: all ease .5s;
     transition: allease .5s;
 }
+a.menubar-item:hover{
+color: white;
+text-decoration: none;
+}
 .menubar-item-text {
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
